@@ -1,0 +1,6 @@
+{
+  "name": "senzhao // alternative portfolio",
+  "description": "Alternative brutalist portfolio & interactive design system for 赵江森 (Senzhao), featuring acid aesthetics, interactive Brat album cover generator, WebAudio synthesizer, and selected works.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

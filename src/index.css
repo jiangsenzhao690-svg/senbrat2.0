@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-brat {
+    font-family: Arial, "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.065em;
+    font-stretch: 75%;
+  }
+
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+  }
+
+  .text-blur-xs {
+    filter: blur(0.3px);
+  }
+
+  .text-blur-sm {
+    filter: blur(0.5px);
+  }
+
+  .text-blur-md {
+    filter: blur(0.9px);
+  }
+
+  .text-blur-lg {
+    filter: blur(1.8px);
+  }
+}
+
+.brat-noise::before {
+  content: "";
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 9990;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.85)),
+    repeating-linear-gradient(0deg, #000 0, #000 1px, transparent 1px, transparent 2px),
+    repeating-linear-gradient(90deg, #000 0, #000 1px, transparent 1px, transparent 2px);
+  background-size: cover, 3px 3px, 3px 3px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.crt-scanlines::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.22) 50%);
+  background-size: 100% 3px;
+  z-index: 9980;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* Custom cursor suppression on devices with fine pointer */
+@media (hover: hover) and (pointer: fine) {
+  html.custom-cursor-enabled,
+  html.custom-cursor-enabled *,
+  html.custom-cursor-enabled a,
+  html.custom-cursor-enabled button,
+  html.custom-cursor-enabled input,
+  html.custom-cursor-enabled textarea {
+    cursor: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0B08;
+}
+::-webkit-scrollbar-thumb {
+  background: #273017;
+  border: 1px solid rgba(154, 205, 50, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ACD32;
+}
+
